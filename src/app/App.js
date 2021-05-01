@@ -1,6 +1,7 @@
 import './App.css';
 import pdfMake from "pdfmake/build/pdfmake";
 import pdfFonts from "../build/vfs_fonts";
+import imageDict from "../build/image_dict";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -25,6 +26,11 @@ function printPDF() {
     content: [
       { text: 'Hello, World!', fontSize: 24 },
       { text: 'สวัสดี, โลก!', fontSize: 15 },
+      {
+        image: imageDict.imageDict.src["world.jpg"],
+        width: 150,
+        height: 150
+      },
     ],
     defaultStyle: {
       font: 'THSarabunNew'
@@ -35,6 +41,7 @@ function printPDF() {
 }
 
 function App() {
+  console.log(imageDict)
   return (
     <div className="App">
       <div>
