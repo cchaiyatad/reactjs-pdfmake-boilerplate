@@ -1,4 +1,4 @@
-# madepdf-boilerplate
+# reactjs-madepdf-boilerplate
 
 ## Create PDF with custom font
 
